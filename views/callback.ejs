@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Loading...</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <h1>Login Successful</h1>
+    <p>Name: <%= data.user.name %></p>
+  </body>
+
+  <!-- below posts 'message' for window.addEventListener -->
+  <script>
+    var data = <%- JSON.stringify(data)  %>
+     window.opener.postMessage({'type': 'userData', 'data': data}, '*')
+    window.close();
+  </script>
+</html>

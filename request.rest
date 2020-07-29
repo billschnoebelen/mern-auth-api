@@ -1,0 +1,69 @@
+###
+POST http://localhost:8000/api/signup
+Content-Type: application/json
+Accept: application/json 
+
+{
+    "name": "",
+    "email": "bill@circuitcase.com",
+    "password": "rrrrrr"
+}
+
+###
+POST http://localhost:8000/api/account-activation
+Content-Type: application/json
+Accept: application/json 
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUnlhbiIsImVtYWlsIjoiYmlsbEBjaXJjdWl0Y2FzZS5jb20iLCJwYXNzd29yZCI6InJycnJyciIsImlhdCI6MTU5NDkyNTE4MSwiZXhwIjoxNTk0OTI1NzgxfQ.xxIn4YRPS_WnZrQnxBcXpgTW5XncXQtQBy68hSAN5QA"
+}
+
+###
+POST http://localhost:8000/api/signin
+Content-Type: application/json
+Accept: application/json 
+
+{
+    "email": "bill@circuitcase.com",
+    "password": "rrrrrr"
+}
+
+### get user
+GET http://localhost:8000/api/user/5f1a234be374bd26b4e3562c
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjFhMjM0YmUzNzRiZDI2YjRlMzU2MmMiLCJpYXQiOjE1OTU2MTcyODcsImV4cCI6MTU5NjIyMjA4N30.-_GSk5y4fTL7WqLq2AL3au2Quwuy2RF-DULZ-CWReAU
+Accept: application/json 
+
+
+### user update data
+PUT   http://localhost:8000/api/user/update
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjFhMjM0YmUzNzRiZDI2YjRlMzU2MmMiLCJpYXQiOjE1OTU2MTcyODcsImV4cCI6MTU5NjIyMjA4N30.-_GSk5y4fTL7WqLq2AL3au2Quwuy2RF-DULZ-CWReAU
+Accept: application/json 
+
+{
+    "name": "stinker head"
+ 
+}
+
+### forgot password email
+PUT   http://localhost:8000/api/forgot-password
+Content-Type: application/json
+Accept: application/json 
+
+{
+    "email": "bill@circuitcase.com"
+ 
+}
+
+### reset password
+PUT   http://localhost:8000/api/reset-password
+Content-Type: application/json
+Accept: application/json 
+
+{
+    "newPassword": "999999",
+    "resetPasswordLink": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjFhMjM0YmUzNzRiZDI2YjRlMzU2MmMiLCJpYXQiOjE1OTU2NTU5NzQsImV4cCI6MTU5NTY1NjU3NH0.VP51yQg-F4bVe6cRAQ0CgnBEp96MLotwNwd8-k-TVaA"
+ 
+}
+
