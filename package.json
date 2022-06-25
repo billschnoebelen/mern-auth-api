@@ -23,7 +23,7 @@
     "lodash": "^4.17.19",
     "mongoose": "^5.9.24",
     "morgan": "^1.10.0",
-    "node-fetch": "^2.6.0"
+    "node-fetch": "^2.6.7"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
